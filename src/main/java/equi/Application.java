@@ -1,4 +1,4 @@
-package hello;
+package equi;
 
 import java.util.Arrays;
 
