@@ -1,5 +1,8 @@
 package equi.controller;
 
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.List;
 import java.util.concurrent.atomic.AtomicLong;
 
 import equi.domain.Payment;
@@ -15,5 +18,17 @@ public class PaymentController {
     @RequestMapping("/payment")
     public Payment payment(@RequestParam(value="id", defaultValue="0") String id) {
         return new Payment(Long.parseLong(id), 35.74, "This is payment description!");
+    }
+
+    @RequestMapping("/payments")
+    public Collection<Payment> payments() {
+        Payment payment1 = new Payment(1, 35.74, "This is payment description!");
+        Payment payment2 = new Payment(2, 135.74, "This is payment description too!");
+        ArrayList<Payment> paymentList = new ArrayList<Payment>();
+
+        paymentList.add(payment1);
+        paymentList.add(payment2);
+
+        return paymentList;
     }
 }
