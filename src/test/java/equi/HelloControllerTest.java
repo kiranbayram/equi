@@ -1,4 +1,4 @@
-package equi;
+/*package equi;
 
 import static org.hamcrest.Matchers.equalTo;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
@@ -28,4 +28,4 @@ public class HelloControllerTest {
                 .andExpect(status().isOk())
                 .andExpect(content().string(equalTo("Greetings from Spring Boot!")));
     }
-}
+}*/
