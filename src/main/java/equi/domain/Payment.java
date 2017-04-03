@@ -1,12 +1,18 @@
 package equi.domain;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
 import java.util.Objects;
 
+@Entity
 public class Payment {
 
+    @Id
+    @GeneratedValue
     private final long id;
     private final double amount;
-    private final String description;
+    private String description;
     private final Payer payer;
 
     public Payment(long id, double amount, Payer payer, String description) {
@@ -27,6 +33,8 @@ public class Payment {
     public String getDescription() {
         return description;
     }
+
+    public void setDescription(String description) { this.description = description; }
 
     @Override
     public boolean equals(Object o) {
