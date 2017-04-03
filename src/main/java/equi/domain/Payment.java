@@ -7,11 +7,13 @@ public class Payment {
     private final long id;
     private final double amount;
     private final String description;
+    private final Payer payer;
 
-    public Payment(long id, double amount, String description) {
+    public Payment(long id, double amount, Payer payer, String description) {
         this.id = id;
         this.amount = amount;
         this.description = description;
+        this.payer = payer;
     }
 
     public long getId() {
